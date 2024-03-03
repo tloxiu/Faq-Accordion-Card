@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root{
+    /* Text */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    /* Gradient */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /* Text */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body{
+  font-family: "Kumbh Sans";
+  min-height: 100vh;
+  background: linear-gradient(var(--Soft-violet), var(--Soft-blue));
+  font-size: 0.75rem;
+}
+
+.wrapper{
+  padding: 9.2rem 1.5rem;
+}
+
+.card{
+  max-width: 57.5rem;
+  min-height: 32rem;
+  padding-bottom: 1.9rem;
+  background-color: white;
+  border-radius: 25px;
+  -webkit-box-shadow: -1px 14px 38px -15px rgba(66, 68, 90, 1);
+  -moz-box-shadow: -1px 14px 38px -15px rgba(66, 68, 90, 1);
+  box-shadow: -1px 14px 38px -15px rgba(66, 68, 90, 1);
+}
+
+.cube-img{
+  display: none;
+}
+
+.picture-content{
+  position: relative;
+}
+
+.pattern-img{
+  margin: 0 auto;
+}
+
+.illustration-img{
+  width: 14.7rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -89%);
+}
+
+.title{
+  margin-top: 1.85rem;
+  margin-bottom: 2.1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.disclosure{
+  padding: 0 1.5rem;
+}
+
+.disclosure-button{
+  width: 100%;
+  font-size: 0.85rem;
+  background: transparent;
+  padding: 0 ;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
+}
+
+span{
+  transition: 0.3s;
+}
+
+span:hover{
+  color: var(--Soft-red);
+}
+
+.disclosure-icon{
+  height: 7px;
+  width: 11px;
+  transition: transform ease-in-out 200ms;
+}
+
+.disclosure-icon-up{
+  transform: rotate(-180deg);
+}
+
+.disclosure-content{
+  margin-top: 0.95rem;
+}
+
+hr{
+  opacity: 0.3;
+  margin: 1.05rem auto;
+}
+
+.dark-accent{
+ font-weight: 700;
+}
+
+[aria-expanded="false"] {
+  + .disclosure-content {
+    display: none;
+  }
+}
+
+[aria-expanded="true"] {
+  + .disclosure-content {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 1440px){
+  .wrapper{
+    padding: 8rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card{
+    margin-left: 2.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+  }
+
+  .cube-img{
+    display: block;
+    position:absolute;
+    z-index: 1;
+    top: 13rem;
+    left: -6rem;
+  }
+
+  .picture-content{
+    width: 41rem;
+    overflow: hidden;
+  }
+  
+  .pattern-img{
+    position: relative;
+    right: 6rem;
+  }
+
+  .illustration-img{
+    width: 30rem;
+    transform: translate(30%, -52%);
+  }
+
+  .faq-section{
+    max-width: 20rem;
+    min-width: 20rem;
+    margin-right: 7.5rem;
+    padding-bottom: 4rem;
+  }
+  
+  .title{
+    margin-top: 4rem;
+    margin-bottom: 2.7rem;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .disclosure{
+    padding: 0;
+  }
+  
+  .disclosure-content{
+    margin-top: 0.95rem;
+  }
+  
+  hr{
+    opacity: 0.3;
+    margin: 1.05rem auto;
+  }
+
+
+}
